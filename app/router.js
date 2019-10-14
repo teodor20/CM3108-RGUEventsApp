@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('events');
   this.route('about');
   this.route('users');
+  this.route('profile');
 });
 
 export default Router;
