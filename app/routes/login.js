@@ -1,7 +1,12 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  redirect() {
-    this.transitionTo('login');
+  actions: {
+    redirect() {
+      this.transitionTo('login');
+    },
+    goToEventsPage() {
+      this.transitionToRoute('events');
+    }
   }
 });
