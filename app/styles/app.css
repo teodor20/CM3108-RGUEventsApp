@@ -1,1 +1,45 @@
+/* Login Page */
+#login_form {
+	width: 33vw;
+	margin: 0 auto;
+	border: 1px solid black;
+	border-radius: 16px;
+	box-shadow: 4px 4px lightgray;
+}
 
+#login_form > * {
+	margin: 0 auto;
+	margin-top: 3vh;
+}
+
+.input_row {
+	width: 50%;
+	margin-top: 1.5vh;
+}
+
+.input_row > label, .input_row > input {
+	display: inline-block;
+}
+
+.login_button {
+	display: block;
+	border: 1px solid grey;
+	margin-bottom: 1.5vh !important;
+}
+
+/* About page */
+.app_details {
+	margin: 0 auto;
+	margin-top: 3vh;
+	width: 75%;
+}
+
+/* TODO, once we have content to add to this section. */
+.app_adminstrators {
+	
+}
+
+/* TODO, once we have content to add to this section. */
+.app_technicians {
+	
+}

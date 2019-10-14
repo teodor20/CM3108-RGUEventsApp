@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('users');
   this.route('profile');
   this.route('eventProfile');
+  this.route('login');
 });
 
 export default Router;
