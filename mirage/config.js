@@ -73,4 +73,61 @@ export default function() {
       }]
     };
   });
+
+  this.get('/users', function() {
+    return {
+      data: [{
+        type: 'users',
+        id: 'user1',
+        attributes: {
+          staffno: '1',
+          firstname: 'user',
+          lastname: 'user',
+          username: 'user',
+          password: 'user',
+          position: 'Lecturer',
+          role: "user"
+        }
+      },
+      {
+        type: 'users',
+        id: 'user2',
+        attributes: {
+          staffno: '2',
+          firstname: 'user1',
+          lastname: 'user1',
+          username: 'user1',
+          password: 'user1',
+          position: 'Lecturer',
+          role: "user"
+        }
+      },
+      {
+        type: 'users',
+        id: 'user3',
+        attributes: {
+          staffno: '3',
+          firstname: 'admin',
+          lastname: 'admin',
+          username: 'admin',
+          password: 'admin',
+          position: 'Lecturer',
+          role: "admin"
+        }
+      },
+      {
+        type: 'users',
+        id: 'user4',
+        attributes: {
+          staffno: '4',
+          firstname: 'admin1',
+          lastname: 'admin1',
+          username: 'admin1',
+          password: 'admin1',
+          position: 'Lecturer',
+          role: "admin"
+        }
+      }]
+    };
+  });
 }

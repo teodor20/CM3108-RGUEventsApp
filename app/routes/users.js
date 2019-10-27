@@ -1,19 +1,27 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
+  userRights: Ember.inject.service('user-rights'),
   model() {
     return {
-      columns:[
+      canEdit: false,
+      selectedItem: null,
+      columns: [
         {
-          "propertyName": "id",
+          "template": "custom/checkbox",
+          "useFilter": false,
+          "mayBeHidden": false
+        },
+        {
+          "propertyName": "staffno",
           "title": "ID"
         },
         {
-          "propertyName": "firstName",
+          "propertyName": "firstname",
           "title": "First Name"
         },
         {
-          "propertyName": "lastName",
+          "propertyName": "lastname",
           "title": "Last Name"
         },
         {
@@ -21,66 +29,29 @@ export default Route.extend({
           "title": "Position"
         }
       ],
-      data: [{
-        'id': '1',
-        'firstName': 'John',
-        'lastName': 'Wick',
-        'position': 'Lecturer'
-      },
-      {
-        'id': '2',
-        'firstName': 'John',
-        'lastName': 'Wick',
-        'position': 'Lecturer'
-      },
-      {
-        'id': '3',
-        'firstName': 'John',
-        'lastName': 'Wick',
-        'position': 'Lecturer'
-      },
-      {
-        'id': '4',
-        'firstName': 'John',
-        'lastName': 'Wick',
-        'position': 'Lecturer'
-      },
-      {
-        'id': '5',
-        'firstName': 'John',
-        'lastName': 'Wick',
-        'position': 'Lecturer'
-      },
-      {
-        'id': '6',
-        'firstName': 'John',
-        'lastName': 'Wick',
-        'position': 'Lecturer'
-      },
-      {
-        'id': '7',
-        'firstName': 'John',
-        'lastName': 'Wick',
-        'position': 'Lecturer'
-      },
-      {
-        'id': '8',
-        'firstName': 'John',
-        'lastName': 'Wick',
-        'position': 'Lecturer'
-      },
-      {
-        'id': '9',
-        'firstName': 'John',
-        'lastName': 'Wick',
-        'position': 'Lecturer'
-      },
-      {
-        'id': '10',
-        'firstName': 'John',
-        'lastName': 'Wick',
-        'position': 'Lecturer'
-      }]
+      data: []
+    }
+  },
+  afterModel(model) {
+    let vm = this;
+    vm.set('currentModel', model);
+
+    let data = vm.store.findAll('user');
+    let canEdit = vm.get('userRights').getRights();
+
+    vm.set('currentModel.data', data);
+    vm.set('currentModel.canEdit', canEdit);
+  },
+  actions: {
+    goToLoginPage() {
+      let vm = this;
+      vm.get('userRights').resetRights();
+      this.get('controller').transitionToRoute('login');
+    },
+    onDocumentDataChanged(settings) {
+      let vm = this;
+      let selectedItem = settings.selectedItems.get('firstObject');
+      vm.set('currentModel.selectedItem', selectedItem);
     }
   }
 });

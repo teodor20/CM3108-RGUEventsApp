@@ -15,12 +15,16 @@
       {{#link-to "users" class="menu-users"}}
         Users
       {{/link-to}}
-      {{#link-to "eventprofile" class="menu-eventprofile"}}
-        Event Profile
+      {{#link-to "profile" class="menu-profile"}}
+        My Profile
       {{/link-to}}
+       <button class="btn btn-secondary" {{action 'goToLoginPage' }}>Logout</button>
     </div>
   </div>
   <div class="body">
     {{outlet}}
+  </div>
+  <div class="footer">
+    &copy;2019 RGU Team Old Boys.
   </div>
 </div>

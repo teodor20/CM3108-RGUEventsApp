@@ -25,6 +25,7 @@ a {
 
 body {
   background: #f3f3f3;
+  margin-bottom:50px;
 }
 
 a {
@@ -400,4 +401,15 @@ p {
 }
 .column.right{
   width: 50%;
+}
+
+.footer{
+  background-color: #712178;
+  color:white;
+  position: fixed;
+  height: 30px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
 }
