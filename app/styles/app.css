@@ -43,3 +43,27 @@
 .app_technicians {
 
 }
+
+/* Create Event Form */
+.new_event_form {
+	margin: 0 auto;
+	border: 1px solid black;
+	border-radius: 16px;
+	box-shadow: 4px 4px lightgray;
+	width: 65%;
+}
+
+/* Override: Remove the usual input row width. */
+.new_event_form > .input_row {
+	width: unset;
+}
+
+/* Error Message */
+.error_message {
+	margin: 0 auto;
+	border: 1px solid black;
+	border-radius: 16px;
+	box-shadow: 4px 4px lightgray;
+	width: 40vw;
+	text-align: center;
+}

@@ -1,0 +1,21 @@
+{{#if model.canEdit}}
+    <div class="input_row">
+		    <label for="task_name">Task Name: </label>
+            <input type="text" name="task_name" id="">
+        </div>
+    <input type="hidden" name="event_id" value="">
+    <div class="input_row">
+        <label for="task_owner">Assignee: </label>
+        <input type="text" name="task_owner" id="">
+    </div>
+    <div class="input_row">
+        <label for="task_status">Status of the Task: </label>
+        <input type="text" name="task_status" id="">
+    </div>
+    <input class="btn btn-default login_button" type="submit" {{action 'storeEvent'}} value="Save Event">
+{{else}}
+    <div class="error_message">
+        <p>You don't have the permission to create a task.</p>
+        <p><a href="/">Return to the home page.</a></p>
+    </div>
+{{/if}}

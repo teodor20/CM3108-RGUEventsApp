@@ -1,7 +1,8 @@
 import Route from '@ember/routing/route';
+import { inject } from "@ember/service";
 
 export default Route.extend({
-  userRights: Ember.inject.service('user-rights'),
+  userRights: inject('user-rights'),
   model() {
     return {
       canEdit: false,

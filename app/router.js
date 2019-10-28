@@ -10,6 +10,10 @@ Router.map(function() {
   this.route('events');
   this.route('about');
   this.route('users');
+  this.route('createevent');
+  this.route('editevent');
+  this.route('createtask');
+  this.route('edittask');
   this.route('profile');
   this.route('eventprofile');
   this.route('login');

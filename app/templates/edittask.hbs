@@ -1,0 +1,19 @@
+{{#if model.canEdit}}
+    {{#if model.selectedEvent}}
+    
+    {{else}}
+    <form>
+        <select name="event_id" id="event_selector">
+            {{#each model.data as |event|}}
+            <option value={{event.id}}>{{event.title}}</option>
+            {{/each}}
+        </select>
+        <input type="submit" {{action "goToEventsPage"}} value="Edit event">
+    </form>
+    {{/if}}
+{{else}}
+    <div class="error_message">
+        <p>You don't have the permission to edit a task.</p>
+        <p><a href="/">Return to the home page.</a></p>
+    </div>
+{{/if}}
