@@ -6,8 +6,8 @@ export default function() {
       data: [
         {
         type: 'events',
+        id: 'hackaton-2019',
         attributes: {
-          id: 'hackaton-2019',
           title: 'RGU Hackaton 2019',
           owner: 'RGY',
           city: 'Aberdeen',
@@ -17,8 +17,8 @@ export default function() {
         }
       }, {
         type: 'events',
+        id: 'urban-living',
         attributes: {
-          id: 'urban-living',
           title: 'Urban Living',
           owner: 'Mike Teavee',
           city: 'Seattle',
@@ -39,8 +39,8 @@ export default function() {
         }
       }, {
         type: 'events',
+        id: 'hackaton-20191',
         attributes: {
-          id: 'hackaton-20191',
           title: 'RGU Hackaton 2019',
           owner: 'RGY',
           city: 'Aberdeen',
@@ -50,8 +50,8 @@ export default function() {
         }
       }, {
         type: 'events',
+        id: 'urban-living1',
         attributes: {
-          id: 'urban-living1',
           title: 'Urban Living',
           owner: 'Mike Teavee',
           city: 'Seattle',
@@ -61,8 +61,8 @@ export default function() {
         }
       }, {
         type: 'events',
+        id: 'downtown-charm1',
         attributes: {
-          id: 'downtown-charm1',
           title: 'Downtown Charm',
           owner: 'Violet Beauregarde',
           city: 'Portland',
