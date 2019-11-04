@@ -130,4 +130,8 @@ export default function() {
       }]
     };
   });
+
+  this.get('/tasks', function() {
+    return {};
+  });
 }

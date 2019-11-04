@@ -1,5 +1,29 @@
 {{#if model.canEdit}}
-    
+    <form class="new_event_form">
+        <div class="input_row">
+		    <label for="event_title">Event Name: </label>
+            <input type="text" name="event_title" value={{model.event_title}}>
+        </div>
+        <div class="input_row">
+            <label for="event_city">City: </label>
+            <input type="text" name="event_city" value={{model.event_city}}>
+        </div>
+        <div class="input_row">
+            <label for="event_image">Event Image (URL): </label>
+            <input type="url" name="event_image" value={{model.event_image}}>
+        </div>
+        <div class="input_row">
+            <label for="event_bedrooms">Number of Bedrooms: </label>
+            <input type="number" name="event_bedrooms" value={{model.event_bedrooms}}>
+        </div>
+        <div class="input_row">
+            <label for="event_description">Description of the event: </label>
+            <textarea name="event_description" value={{model.event_description}}></textarea>
+        </div>
+        <input type="hidden" name="event_id" value={{model.event_id}}>
+        <input type="hidden" name="event_owner" value={{model.event_owner}}>
+        <input class="btn btn-default login_button" type="submit" {{action 'updateEvent'}} value="Save Event">
+    </form>
 {{else}}
     <div class="error_message">
         <p>You don't have the permission to edit an event.</p>

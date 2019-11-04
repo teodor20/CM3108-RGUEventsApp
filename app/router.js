@@ -11,9 +11,9 @@ Router.map(function() {
   this.route('about');
   this.route('users');
   this.route('createevent');
-  this.route('editevent');
-  this.route('createtask');
-  this.route('edittask');
+  this.route('editevent', {path: '/editevent/:event_id'});
+  this.route('createtask', {path: '/createtask/:event_id'});
+  this.route('edittask', {path: '/createtask/:task_id'});
   this.route('profile');
   this.route('eventprofile');
   this.route('login');

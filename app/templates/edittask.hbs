@@ -1,16 +1,19 @@
 {{#if model.canEdit}}
-    {{#if model.selectedEvent}}
-    
-    {{else}}
-    <form>
-        <select name="event_id" id="event_selector">
-            {{#each model.data as |event|}}
-            <option value={{event.id}}>{{event.title}}</option>
-            {{/each}}
-        </select>
-        <input type="submit" {{action "goToEventsPage"}} value="Edit event">
-    </form>
-    {{/if}}
+    <!-- TODO: Add a "Edit Task" button next to a task on the event profile page -->
+    <div class="input_row">
+		    <label for="task_name">Task Name: </label>
+            <input type="text" name="task_name">
+        </div>
+    <input type="hidden" name="event_id" value="">
+    <div class="input_row">
+        <label for="task_owner">Assignee: </label>
+        <input type="text" name="task_owner">
+    </div>
+    <div class="input_row">
+        <label for="task_status">Status of the Task: </label>
+        <input type="text" name="task_status">
+    </div>
+    <input class="btn btn-default login_button" type="submit" {{action 'updateTask'}} value="Save Event">
 {{else}}
     <div class="error_message">
         <p>You don't have the permission to edit a task.</p>

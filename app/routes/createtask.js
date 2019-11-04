@@ -3,10 +3,10 @@ import { inject } from "@ember/service";
 
 export default Route.extend({
     userRights: inject('user-rights'),
-    model() {
+    model(params) {
         return {
-            canEdit: this.userRights.getRights()
-            
+            canEdit: this.userRights.getRights(),
+            event_id: params.event_id
         };
     },
     actions: {
