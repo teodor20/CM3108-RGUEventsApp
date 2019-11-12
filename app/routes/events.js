@@ -6,7 +6,7 @@ export default Route.extend({
   model() {
     return {
       data: this.store.findAll('event'),
-      canEdit: false
+      canEdit: this.userRights.getRights()
     }
   },
   afterModel(model) {

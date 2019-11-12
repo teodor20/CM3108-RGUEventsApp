@@ -13,12 +13,12 @@ export default Route.extend({
         storeEvent() {
             let vm = this;
             this.store.createRecord("event", {
-                title: vm.controller.get("event_title"),
+                title: vm.controller.get("event-title"),
                 owner: `${vm.get('userRights').firstname} ${vm.get('userRights').lastname}`,
-                city: vm.controller.get("event_city"),
-                image: vm.controller.get("event_image"),
-                bedrooms: vm.controller.get("event_bedrooms"),
-                description: vm.controller.get("event_description")
+                city: vm.controller.get("event-city"),
+                image: vm.controller.get("event-image"),
+                bedrooms: vm.controller.get("event-bedrooms"),
+                description: vm.controller.get("event-description")
             });
             this.controller.transitionToRoute('events')
         },

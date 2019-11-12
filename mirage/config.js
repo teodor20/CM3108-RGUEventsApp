@@ -132,6 +132,26 @@ export default function() {
   });
 
   this.get('/tasks', function() {
-    return {};
+    return {
+      "data": [{
+        "type": 'task',
+        "id": '1',
+        "attributes": {
+          "name": 'Task 001',
+          "event-id": '0',
+          "task-owner": 'User 001',
+          "task-status": 'In Progress'
+        }
+      },{
+        "type": 'task',
+        "id": '2',
+        "attributes": {
+          "name": 'Task 002',
+          "event-id": '0',
+          "task-owner": 'User 002',
+          "task-status": 'In Progress'
+        }
+      }]
+    };
   });
 }

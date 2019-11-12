@@ -5,18 +5,18 @@ export default Route.extend({
     userRights: inject('user-rights'),
     model(params) {
         return {
-            canEdit: this.userRights.getRights(),
-            event_id: params.event_id
+            "canEdit": this.userRights.getRights(),
+            "event-id": params.event_id
         };
     },
     actions: {
         saveTask() {
             let vm = this;
             vm.store.createRecord("task", {
-                name: vm.controller.get("task_name"),
-                event_id: vm.controller.get("event_id"),
-                task_owner: vm.controller.get("task_owner"),
-                task_status: vm.controller.get("task_status")
+                "name": vm.controller.get("task-name"),
+                "event-id": vm.controller.get("event-id"),
+                "task-owner": vm.controller.get("task-owner"),
+                "task-status": vm.controller.get("task-status")
             })
         },
         goToLoginPage() {

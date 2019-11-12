@@ -1,27 +1,27 @@
 {{#if model.canEdit}}
     <form class="new_event_form">
         <div class="input_row">
-		    <label for="event_title">Event Name: </label>
-            <input type="text" name="event_title" value={{model.event_title}}>
+		    <label for="event-title">Event Name: </label>
+            <input type="text" name="event-title" value={{model.event-title}}>
         </div>
         <div class="input_row">
-            <label for="event_city">City: </label>
-            <input type="text" name="event_city" value={{model.event_city}}>
+            <label for="event-city">City: </label>
+            <input type="text" name="event-city" value={{model.event-city}}>
         </div>
         <div class="input_row">
-            <label for="event_image">Event Image (URL): </label>
-            <input type="url" name="event_image" value={{model.event_image}}>
+            <label for="event-image">Event Image (URL): </label>
+            <input type="url" name="event-image" value={{model.event-image}}>
         </div>
         <div class="input_row">
-            <label for="event_bedrooms">Number of Bedrooms: </label>
-            <input type="number" name="event_bedrooms" value={{model.event_bedrooms}}>
+            <label for="event-bedrooms">Number of Bedrooms: </label>
+            <input type="number" name="event-bedrooms" value={{model.event-bedrooms}}>
         </div>
         <div class="input_row">
-            <label for="event_description">Description of the event: </label>
-            <textarea name="event_description" value={{model.event_description}}></textarea>
+            <label for="event-description">Description of the event: </label>
+            <textarea name="event-description" value={{model.event-description}}></textarea>
         </div>
-        <input type="hidden" name="event_id" value={{model.event_id}}>
-        <input type="hidden" name="event_owner" value={{model.event_owner}}>
+        <input type="hidden" name="event-id" value={{model.event-id}}>
+        <input type="hidden" name="event-owner" value={{model.event-owner}}>
         <input class="btn btn-default login_button" type="submit" {{action 'updateEvent'}} value="Save Event">
     </form>
 {{else}}

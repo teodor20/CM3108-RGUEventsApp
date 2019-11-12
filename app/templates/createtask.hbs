@@ -1,19 +1,19 @@
 {{#if model.canEdit}}
     <!-- TODO: Add a "Create Task" button next on the event profile page -->
     <div class="input_row">
-		    <label for="task_name">Task Name: </label>
-            <input type="text" name="task_name">
+		    <label for="task-name">Task Name: </label>
+            <input type="text" name="task-name">
         </div>
-    <input type="hidden" name="event_id" value="">
+    <input type="hidden" name="event-id" value="">
     <div class="input_row">
-        <label for="task_owner">Assignee: </label>
-        <input type="text" name="task_owner">
+        <label for="task-owner">Assignee: </label>
+        <input type="text" name="task-owner">
     </div>
     <div class="input_row">
-        <label for="task_status">Status of the Task: </label>
-        <input type="text" name="task_status">
+        <label for="task-status">Status of the Task: </label>
+        <input type="text" name="task-status">
     </div>
-    <input type="hidden" name="event_id" value={{model.task_event_id}}>
+    <input type="hidden" name="event-id" value={{model.task-event-id}}>
     <input class="btn btn-default login_button" type="submit" {{action 'storeEvent'}} value="Save Event">
 {{else}}
     <div class="error_message">
