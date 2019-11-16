@@ -1,14 +1,15 @@
 <div class="jumbo">
-  <h2>Event 001</h2>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg" alt="PhotoOfEvent!"/>
+  <h2 class="event-title">Event 001</h2>
+  <img class="event-image" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg" alt="PhotoOfEvent!"/>
   <ul style="list-style-type:none">
-    <li>Event Description:
+    <li class="event-description">Event Description:
       <p>The Event is a standard charity event holded for the XYZ Cross.</p>
     </li>
-    <div class="row">
-      <div class="date">Date of Venue: 20/10/19</div>
-      <div class="location">Location of Venue: Union Square</div>
-      <div class="organiser">Event Organiser: Mr Maxi Schuler</div>
+    <div class="colum left">
+      <div class="event-date">Date of Venue: 20/10/19</div>
+      <div class="event-location">Location of Venue: Union Square</div>
+      <div class="event-organiser">Event Organiser: Mr Maxi Schuler</div>
+      <div class="event-attendance"> Estimated Attendance:  </div>
     </div>
 
     {{#if model.canEdit}}
@@ -16,7 +17,7 @@
     {{/if}}
 
     <div class="column right">
-      <li>Organisation Team:
+      <li class="event-teamlist">Organisation Team:
         <ul>
           <li>User 001</li>
           <li>User 002</li>
@@ -24,7 +25,7 @@
       </li>
     </div>
     <div class="column right">
-      <li>Task/To Do list:
+      <li class="event-tasklist">Task/To Do list:
         <ul>
           {{#each this.model.data as |task|}}
           <li>{{task.name}} {{#if model.canEdit}} <a href="edittask?task_id={{task.id}}">Edit Task</a> {{/if}}</li>

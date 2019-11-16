@@ -5,20 +5,36 @@
             <input type="text" name="event-title">
         </div>
         <div class="input_row">
-            <label for="event-city">City: </label>
-            <input type="text" name="event-city">
+            <label for="event-location">Location: </label>
+            <input type="text" name="event-location">
+        </div>
+        <div class="input_row">
+            <label for="event-organiser">Event Organizer: </label>
+            <input type="text" name="event-organiser">
         </div>
         <div class="input_row">
             <label for="event-image">Event Image (URL): </label>
             <input type="url" name="event-image">
         </div>
         <div class="input_row">
-            <label for="event-bedrooms">Number of Bedrooms: </label>
-            <input type="number" name="event-bedrooms">
+            <label for="event-attendence">Estimated Attendece: </label>
+            <input type="number" name="event-attendence">
+        </div>
+        <div class="input_row">
+            <label for="event-date">Date of Event: </label>
+            <input type="date" name="event-date">
         </div>
         <div class="input_row">
             <label for="event-description">Description of the event: </label>
             <textarea name="event-description"></textarea>
+        </div>
+        <div class="input_row">
+            <label for="event-tasklist">Task/To Do List: </label>
+            <input type="array" name="event-tasklist">
+        </div>
+        <div class="input_row">
+            <label for="event-teamlist">Organizer Team-members: </label>
+            <input type="array" name="event-teamlist">
         </div>
         <input class="btn btn-default login_button" type="submit" {{action 'storeEvent'}} value="Save Event">
     </form>
