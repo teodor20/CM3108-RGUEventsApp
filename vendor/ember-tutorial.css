@@ -402,15 +402,31 @@ p {
 .column.right{
   width: 50%;
 }
+
 /**lists of eventprofile*/
-.date{
+.event-date{
   padding: 15px;
 }
-.location{
+.event-location{
   padding: 15px;
-}.organiser{
+}.event-organiser{
   padding: 15px;
 }
+.event-attendance{
+  padding: 15px;
+}
+.event-title{
+  padding: 20px;
+  margin: 10px;
+}
+.details{
+padding: 10px;
+margin: 10px;
+}
+.event-image{
+  float: left;
+}
+
 .footer{
   background-color: #712178;
   color:white;
