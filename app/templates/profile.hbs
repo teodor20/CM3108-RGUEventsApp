@@ -1,31 +1,31 @@
 {{outlet}}
 <div class="jumbo-user">
-  <h2 class= "user-fullname">User 001</h2>
-  <img class="user-image" scr ="" alt="...">
+  <h2 class="user-fullname">Hi, {{model.firstname}}</h2>
+  <img scr="https://www.iconsdb.com/icons/preview/purple/user-4-xxl.png" alt="User Image">
 
-        <div class="user-idnumber" >ID:</div>
-         <div class="user-title" >Title:</div>
-        <div class="user-firstname" >First Name:</div>
-        <div class="user-othername" >Other Name:</div>
-        <div class="user-lastname" >Last Name:</div>
-         <div class="user-gender" >Gender:</div>
-          <div class="user-age" >Age:</div>
-         <div class="user-type" >Type:</div>
-         <div class="user-jobtitle">Job:</div>
-          <div class="user-email" >Email address:</div>
-           <div class="user-mobile" >Mobile  Number:</div>
-            <div class="user-worknumber">Work Number:</div>
-         <li class="user-projects">Experience/Past projects: 
-             <ul>
-                 <li>some job</li>
-             </ul>
-         </li>
-          <li class="user-skills" >Skills:
-              <ul>
-                 <li>some Skills</li>
-             </ul>
-          </li>
+  <div class="user-idnumber">ID: {{model.id}}</div>
+  <div class="user-firstname">First Name: {{model.firstname}}</div>
+  <div class="user-lastname">Last Name: {{model.lastname}}</div>
+  <div class="user-gender">Gender: {{model.gender}}</div>
+  <div class="user-type">Type: {{model.role}}</div>
+  <div class="user-jobtitle">Role: {{model.position}}</div>
+  <div class="user-email">Email address: {{model.email}}</div>
+  <div class="user-mobile">Mobile Number: {{model.mobile}}</div>
 
-  
+  <div class="user-projects">Assigned Events:
+    <ul>
+      {{#each this.model.events as |event|}}
+        <li>{{event.title}}</li>
+      {{/each}}
+    </ul>
+  </div>
 
+  <div class="user-skills">Skills:
+    <ul>
+      {{#each this.model.skills as |skill|}}
+        <li>{{skill.title}}</li>
+      {{/each}}
+    </ul>
+  </div>
 </div>
+<button class="btn btn-primary" {{action "editUser"}}>Edit My Profile</button>
