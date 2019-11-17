@@ -78,9 +78,9 @@ export default function() {
     return {
       data: [{
         type: 'users',
-        id: 'user1',
+        id: 1,
         attributes: {
-          staffno: '1',
+          staffid: '1',
           firstname: 'user',
           lastname: 'user',
           username: 'user',
@@ -94,9 +94,9 @@ export default function() {
       },
       {
         type: 'users',
-        id: 'user2',
+        id: 2,
         attributes: {
-          staffno: '2',
+          staffid: '2',
           firstname: 'user1',
           lastname: 'user1',
           username: 'user1',
@@ -110,9 +110,9 @@ export default function() {
       },
       {
         type: 'users',
-        id: 'user3',
+        id: 3,
         attributes: {
-          staffno: '3',
+          staffid: '3',
           firstname: 'admin',
           lastname: 'admin',
           username: 'admin',
@@ -126,9 +126,9 @@ export default function() {
       },
       {
         type: 'users',
-        id: 'user4',
+        id: 4,
         attributes: {
-          staffno: '4',
+          staffid: '4',
           firstname: 'admin1',
           lastname: 'admin1',
           username: 'admin1',

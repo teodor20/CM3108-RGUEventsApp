@@ -14,7 +14,7 @@ export default Route.extend({
           "mayBeHidden": false
         },
         {
-          "propertyName": "staffno",
+          "propertyName": "staffid",
           "title": "ID"
         },
         {
@@ -56,7 +56,28 @@ export default Route.extend({
     },
     addUser() {
       let vm = this;
-      vm.get('controller').transitionToRoute('createuser');
+      let lastUserId = vm.get('currentModel.data.lastObject.id');
+      let newId = (Number(lastUserId) + 1).toString();
+      vm.get('controller').transitionToRoute('createuser', newId);
+    },
+    editUser() {
+      let vm = this;
+      let selectedItem = vm.get('currentModel.selectedItem');
+      let userId = selectedItem.get('id');
+      vm.get('controller').transitionToRoute('edituser', userId);
+    },
+    deleteUser() {
+      //DOES NOT WORK
+      let vm = this;
+      let selectedItem = vm.get('currentModel.selectedItem');
+      let userId = selectedItem.get('id');
+      //let record = vm.store.peekRecord('user', userId);
+      vm.store.findRecord('user', userId).then(function (record) {
+        data.removeObject(record);
+        record.deleteRecord();
+      })
+      let data = vm.get('currentModel.data').toArray();
+      vm.set('currentModel.data', data);
     }
   }
 });

@@ -1,33 +1,33 @@
 <div class="jumbo">
-  <h2>Create a new user</h2>
+  <h2>Edit User</h2>
 </div>
 
 <form>
   First Name: <br>
-  {{input type="text" name="firstname" value=firstname}}<br>
+  {{input type="text" name="firstname" value=model.firstname}}<br>
   Last Name: <br>
-  {{input type="text" name="lastname" value=lastname}}<br>
+  {{input type="text" name="lastname" value=model.lastname}}<br>
   Gender: <br>
   <input type="radio" name="gender" value="male" checked> Male<br>
   <input type="radio" name="gender" value="female"> Female<br>
   Email: <br>
-  {{input type="email" name="email" value=email}}<br>
+  {{input type="email" name="email" value=model.email}}<br>
   Mobile: <br>
-  {{input type="tel" name="mobile" value=mobile}}<br>
+  {{input type="tel" name="mobile" value=model.mobile}}<br>
   Position: <br>
-  {{input type="text" name="position" value=position}}<br>
+  {{input type="text" name="position" value=model.position}}<br>
   Matriculation Number: <br>
-  {{input type="text" name="id" value=id}}<br>
+  {{input type="text" name="id" value=model.id}}<br>
   Role: <br>
   <input type="radio" name="role" value="admin"> Admin<br>
   <input type="radio" name="role" value="staff"> Staff<br>
   <input type="radio" name="role" value="user" checked> Student<br>
   Username: <br>
-  {{input type="text" name="username" value=username}}<br>
+  {{input type="text" name="username" value=model.username}}<br>
   Password: <br>
-  {{input type="password" name="password" value=password}}<br>
+  {{input type="password" name="password" value=model.password}}<br>
   Confirm Password: <br>
-  {{input type="password" name="confirmPassword" value=confirmPassword}}<br><br>
+  {{input type="password" name="confirmPassword" value=model.confirmPassword}}<br><br>
   <div class="pull-left">
     <input class="btn btn-primary" type="submit" {{action "saveUser"}} value="Save">
     <input class="btn btn-danger" type="submit" {{action "cancel"}} value="Cancel">

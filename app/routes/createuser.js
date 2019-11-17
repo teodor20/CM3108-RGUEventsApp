@@ -2,6 +2,20 @@ import Route from '@ember/routing/route';
 import { inject } from "@ember/service";
 
 export default Route.extend({
+  userRights: inject('user-rights'),
+  model(params) {
+    return {
+      newId: params.new_id,
+      data: null,
+    }
+  },
+  afterModel(model) {
+    let vm = this;
+    vm.set('currentModel', model);
+
+
+    vm.set
+  },
   actions: {
     goToLoginPage() {
       let vm = this;
@@ -10,6 +24,8 @@ export default Route.extend({
     },
     saveUser() {
       let vm = this;
+
+      let newId = vm.get('currentModel.newId');
       let firstname = vm.get('controller').get('firstname');
       let lastname = vm.get('controller').get('lastname');
       let gender = vm.get('controller').get('gender');
@@ -27,7 +43,8 @@ export default Route.extend({
       }
       else if (password == confirmPassword) {
         vm.store.createRecord('user', {
-          staffno: staffId,
+          id: newId,
+          staffid: staffId,
           firstname: firstname,
           lastname: lastname,
           username: username,

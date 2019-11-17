@@ -17,7 +17,8 @@ Router.map(function() {
   this.route('profile');
   this.route('eventprofile');
   this.route('login');
-  this.route('createuser');
+  this.route('createuser', {path: '/edituser/:new_id'});
+  this.route('edituser', {path: '/edituser/:user_id'});
 });
 
 export default Router;
