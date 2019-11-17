@@ -14,7 +14,7 @@
         <input type="text" name="task-status">
     </div>
     <input type="hidden" name="event-id" value={{model.task-event-id}}>
-    <input class="btn btn-default login_button" type="submit" {{action 'storeEvent'}} value="Save Event">
+    <input class="btn btn-default login_button" type="submit" {{action 'saveTask'}} value="Save Event">
 {{else}}
     <div class="error_message">
         <p>You don't have the permission to create a task.</p>

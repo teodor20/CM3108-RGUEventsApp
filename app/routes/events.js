@@ -22,8 +22,17 @@ export default Route.extend({
       vm.get('userRights').resetRights();
       vm.get('controller').transitionToRoute('login');
     },
+
+    goToEventProfile() {
+      this.controller.transitionToRoute('eventprofile');
+    },
+
     addEvent() {
       this.controller.transitionToRoute('createevent');
+    },
+
+    editEvent(event_id) {
+      this.controller.transitionToRoute(`/editevent/${event_id}`);
     }
   },
 });

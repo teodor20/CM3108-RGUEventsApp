@@ -5,24 +5,24 @@ export default Service.extend({
   user: null,
 
   saveRights(canEdit) {
-    if (canEdit) {
-      this.isAdmin = true;
-    }
-    else {
-      this.isAdmin = false;
-    }
+    this.isAdmin = canEdit;
   },
+
   saveUser(user) {
     this.user = user;
   },
+
   getRights() {
-    return this.isAdmin
+    return this.isAdmin;
   },
+
   getUser() {
-    return this.user
+    return this.user;
   },
+
   resetRights() {
     this.isAdmin = false;
     this.user = null;
   }
+  
 });

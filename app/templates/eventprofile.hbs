@@ -10,11 +10,6 @@
       <div class="location">Location of Venue: Union Square</div>
       <div class="organiser">Event Organiser: Mr Maxi Schuler</div>
     </div>
-
-    {{#if model.canEdit}}
-    <a href="#" class="btn btn-primary btn-custom mt-auto">Edit Event</a>
-    {{/if}}
-
     <div class="column right">
       <li>Organisation Team:
         <ul>
@@ -25,9 +20,12 @@
     </div>
     <div class="column right">
       <li>Task/To Do list:
+        {{#if model.canEdit}}
+        <a href="#" class="btn btn-primary btn-custom mt-auto" {{action 'createTask' 0}}>Create Task</a>
+        {{/if}}
         <ul>
           {{#each this.model.data as |task|}}
-          <li>{{task.name}} {{#if model.canEdit}} <a href="edittask?task_id={{task.id}}">Edit Task</a> {{/if}}</li>
+          <li>{{task.name}} {{#if model.canEdit}} <a href="#" class="btn btn-primary btn-custom mt-auto" {{action "editTask" task.id}}>Edit Task</a> {{/if}}</li>
           {{/each}}
         </ul>
       </li>
