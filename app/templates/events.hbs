@@ -11,10 +11,12 @@
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">{{event.title}}</h5>
           <p class="card-text">{{event.description}}</p>
-          <a href="#" {{action "goToEventProfile"}} class="btn btn-primary btn-custom mt-auto">View Event</a>
-          {{#if model.canEdit}}
-          <a href="#" {{action "editEvent" event.id}} class="btn btn-primary btn-custom mt-auto">Edit Event</a>
-          {{/if}}
+          <div>
+            <a href="#" {{action "goToEventProfile"}} class="btn btn-primary btn-custom mt-auto">View Event</a>
+            {{#if model.canEdit}}
+            <a href="#" {{action "editEvent" event.id}} class="btn btn-primary btn-custom mt-auto">Edit Event</a>
+            {{/if}}
+          </div>
         </div>
       </div>
     </div>
