@@ -475,12 +475,48 @@ p {
 }
 
 /**lists of eventprofile*/
+.jumbo-eventprofile{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.event-title{
+  grid-column: 1/5;
+  grid-row: 1;
+}
+.event-image{
+  grid-column: 1/2;
+  grid-row: 2;
+  height: 200px;
+  top: -25px;
+  right: -20px;
+}
+  }
+.event-details{
+grid-column: 3/4;
+grid-row: 2;
+}
+.event-description{
+  grid-columns: auto;
+  grid-row: 3;
+}
+.event-teamlist{
+  grid-column: 3/5;
+  grid-row: 4;
+}
+.event-tasklist{
+  grid-column: 1/2;
+  grid-row: 4;
+}
 .event-date{
   padding: 15px;
 }
+
 .event-location{
   padding: 15px;
-}.event-organiser{
+}
+.event-organiser{
   padding: 15px;
 }
 .event-attendance{
@@ -490,16 +526,6 @@ p {
   padding: 20px;
   margin: 10px;
 }
-.details{
-padding: 10px;
-margin: 10px;
-
-}
-.event-image{
-  float: left;
-
-}
-
 .footer{
   background-color: #712178;
   color:white;

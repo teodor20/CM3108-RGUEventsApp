@@ -1,31 +1,29 @@
-<div class="jumbo">
+<div class="jumbo-eventprofile">
   <h2 class="event-title">Event 001</h2>
   <img class="event-image" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg" alt="PhotoOfEvent!"/>
-  <ul style="list-style-type:none">
-    
-    <div class="details">
+  
+    <div class="event-details">
       <div class="event-date">Date of Venue: 20/10/19</div>
       <div class="event-location">Location of Venue: Union Square</div>
       <div class="event-organiser">Event Organiser: Mr Maxi Schuler</div>
       <div class="event-attendance"> Estimated Attendance:  </div>
     </div>
-    <li class="event-description">Event Description:
+    <div class="event-description">Event Description:
       <p>The Event is a standard charity event holded for the XYZ Cross.</p>
-    </li>
+    </div>
 
     {{#if model.canEdit}}
     <a href="#" class="btn btn-primary btn-custom mt-auto">Edit Event</a>
     {{/if}}
 
-    <div class="column right">
+    
       <li class="event-teamlist">Organisation Team:
         <ul>
           <li>User 001</li>
           <li>User 002</li>
         </ul>
       </li>
-    </div>
-    <div class="column right">
+    
       <li class="event-tasklist">Task/To Do list:
         <ul>
           {{#each this.model.data as |task|}}
@@ -33,6 +31,4 @@
           {{/each}}
         </ul>
       </li>
-    </div>
-  </ul>
 </div>
