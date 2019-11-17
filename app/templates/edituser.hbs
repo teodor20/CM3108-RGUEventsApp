@@ -2,34 +2,74 @@
   <h2>Edit User</h2>
 </div>
 
-<form>
-  First Name: <br>
-  {{input type="text" name="firstname" value=model.firstname}}<br>
-  Last Name: <br>
-  {{input type="text" name="lastname" value=model.lastname}}<br>
-  Gender: <br>
-  <input type="radio" name="gender" value="male" checked> Male<br>
-  <input type="radio" name="gender" value="female"> Female<br>
-  Email: <br>
-  {{input type="email" name="email" value=model.email}}<br>
-  Mobile: <br>
-  {{input type="tel" name="mobile" value=model.mobile}}<br>
-  Position: <br>
-  {{input type="text" name="position" value=model.position}}<br>
-  Matriculation Number: <br>
-  {{input type="text" name="id" value=model.id}}<br>
-  Role: <br>
-  <input type="radio" name="role" value="admin"> Admin<br>
-  <input type="radio" name="role" value="staff"> Staff<br>
-  <input type="radio" name="role" value="user" checked> Student<br>
-  Username: <br>
-  {{input type="text" name="username" value=model.username}}<br>
-  Password: <br>
-  {{input type="password" name="password" value=model.password}}<br>
-  Confirm Password: <br>
-  {{input type="password" name="confirmPassword" value=model.confirmPassword}}<br><br>
-  <div class="pull-left">
-    <input class="btn btn-primary" type="submit" {{action "saveUser"}} value="Save">
-    <input class="btn btn-danger" type="submit" {{action "cancel"}} value="Cancel">
+<div class="row" style="padding-left: 5%">
+  <div class="column">
+    <form>
+      First Name: <br>
+      {{input type="text" name="firstname" value=model.firstname}}<br>
+      Last Name: <br>
+      {{input type="text" name="lastname" value=model.lastname}}<br>
+      Gender: <br>
+      <input type="radio" name="gender" value="male" checked> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      Email: <br>
+      {{input type="email" name="email" value=model.email}}<br>
+      Mobile: <br>
+      {{input type="tel" name="mobile" value=model.mobile}}<br>
+      Position: <br>
+      {{input type="text" name="position" value=model.position}}<br>
+      Matriculation Number: <br>
+      {{input type="text" name="id" value=model.id}}<br>
+      Role: <br>
+      <input type="radio" name="role" value="admin"> Admin<br>
+      <input type="radio" name="role" value="staff"> Staff<br>
+      <input type="radio" name="role" value="user" checked> Student<br>
+      Username: <br>
+      {{input type="text" name="username"  disabled=(not model.canEdit) value=model.username}}<br>
+      Password: <br>
+      {{input type="password" name="password" disabled=(not model.canEdit) value=model.password}}<br>
+      Confirm Password: <br>
+      {{input type="password" name="confirmPassword" disabled=(not model.canEdit) value=model.confirmPassword}}<br><br>
+      <div class="pull-left">
+        <input class="btn btn-primary" type="submit" {{action "saveUser"}} value="Save">
+        <input class="btn btn-danger" type="submit" {{action "cancel"}} value="Cancel">
+      </div>
+    </form>
   </div>
-</form>
+  <td></td>
+  <div class="column" style="margin-left: 10%">
+    <h3>Skills:</h3>
+    {{models-table
+        data=model.skills.data
+        columns=model.skills.columns
+        pageSize=10000
+        showComponentFooter=false
+        multipleSelect=false
+        sendDisplayDataChangedAction=true
+        showGlobalFilter=false
+        showColumnsDropdown=false
+        displayDataChangedAction="onSkillsTableDataChanged"}}
+    Add Skill: <br>
+    {{input type="text" name="newskill" value=model.newSkill}}<br><br>
+    <input class="btn btn-warning" type="submit" disabled={{if model.canEdit false true}} {{action "addSkill"}} value="Add Skill">
+    <input class="btn btn-danger" type="submit" disabled={{if model.selectedSkill false true}} {{action "deleteSkill"}} value="Delete Skill">
+  </div>
+  <div class="column" style="margin-left: 10%">
+    <h3>Events:</h3>
+    {{models-table
+        data=model.events.data
+        columns=model.events.columns
+        pageSize=10000
+        showComponentFooter=false
+        multipleSelect=false
+        sendDisplayDataChangedAction=true
+        showGlobalFilter=false
+        showColumnsDropdown=false
+        displayDataChangedAction="onEventsTableDataChanged"}}
+    Add Skill: <br>
+    {{input type="text" name="newskill" value=model.newEvent}}<br><br>
+    <input class="btn btn-warning" type="submit" disabled={{if model.canEdit false true}} {{action "addEvent"}} value="Add Event">
+    <input class="btn btn-danger" type="submit" disabled={{if model.selectedEvent false true}} {{action "deleteEvent"}} value="Delete Event">
+  </div>
+</div>
+

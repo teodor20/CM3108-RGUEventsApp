@@ -80,64 +80,163 @@ export default function() {
         type: 'users',
         id: 1,
         attributes: {
-          staffid: '1',
-          firstname: 'user',
-          lastname: 'user',
-          username: 'user',
-          password: 'user',
+          staffid: '1856997',
+          firstname: 'Rima',
+          lastname: 'Goff',
+          username: '1856997',
+          password: '1856997',
           position: 'Lecturer',
-          role: "user",
-          gender: "Male",
-          email: "user@rgu.ac.uk",
-          mobile: "0785214785"
+          role: "staff",
+          gender: "Female",
+          email: "R.Goff@rgu.ac.uk",
+          mobile: "0785214785",
+          skills: [{
+            title: "Maths"
+          },
+          {
+            title: "Accounting"
+          },
+          {
+            title: "Graphic Design"
+          },
+          {
+            title: "Data Analysis"
+          }],
+          events: [{
+            title: "Christmas Party"
+          },
+          {
+            title: "New Year's Eve"
+          },
+          {
+            title: "RGU Hackaton"
+          }]
         }
       },
       {
         type: 'users',
         id: 2,
         attributes: {
-          staffid: '2',
-          firstname: 'user1',
-          lastname: 'user1',
-          username: 'user1',
-          password: 'user1',
+          staffid: '1227845',
+          firstname: 'Amanda',
+          lastname: 'Alfaro',
+          username: '1227845',
+          password: '1227845',
           position: 'Lecturer',
-          role: "user",
-          gender: "Male",
-          email: "user@rgu.ac.uk",
-          mobile: "0785214785"
+          role: "staff",
+          gender: "Female",
+          email: "A.Alfaro@rgu.ac.uk",
+          mobile: "0782214785",
+          skills: [{
+            title: "Sales"
+          },
+          {
+            title: "Marketing"
+          },
+          {
+            title: "IT Skills"
+          },
+          {
+            title: "Diplomacy"
+          }],
+          events: [{
+            title: "Christmas Party"
+          },
+          {
+            title: "New Year's Eve"
+          },
+          {
+            title: "RGU Hackaton"
+          }]
         }
       },
       {
         type: 'users',
         id: 3,
         attributes: {
-          staffid: '3',
-          firstname: 'admin',
-          lastname: 'admin',
-          username: 'admin',
-          password: 'admin',
-          position: 'Lecturer',
-          role: "admin",
+          staffid: '1668749',
+          firstname: 'Aryan',
+          lastname: 'Rivera',
+          username: '1668749',
+          password: '1668749',
+          position: 'Student',
+          role: "student",
           gender: "Male",
-          email: "user@rgu.ac.uk",
-          mobile: "0785214785"
+          email: "A.Rivera@rgu.ac.uk",
+          mobile: "0785214785",
+          skills: [{
+            title: "Strategic Thinking"
+          },
+          {
+            title: "Research"
+          },
+          {
+            title: "Driving"
+          },
+          {
+            title: "Foreign Languages"
+          }],
+          events: [{
+            title: "Christmas Party"
+          },
+          {
+            title: "New Year's Eve"
+          },
+          {
+            title: "RGU Hackaton"
+          }]
         }
       },
       {
         type: 'users',
         id: 4,
         attributes: {
-          staffid: '4',
-          firstname: 'admin1',
-          lastname: 'admin1',
-          username: 'admin1',
-          password: 'admin1',
-          position: 'Lecturer',
+          staffid: '1588745',
+          firstname: 'Maria',
+          lastname: 'Stone',
+          username: '1588745',
+          password: '1588745',
+          position: 'Student',
+          role: "student",
+          gender: "Female",
+          email: "M.Stone@rgu.ac.uk",
+          mobile: "0785214785",
+          skills: [{
+            title: "Sales"
+          },
+          {
+            title: "Driving"
+          },
+          {
+            title: "Graphic Design"
+          }],
+          events: [{
+            title: "Christmas Party"
+          },
+          {
+            title: "New Year's Eve"
+          },
+          {
+            title: "RGU Hackaton"
+          }]
+        }
+      },
+      {
+        type: 'users',
+        id: 5,
+        attributes: {
+          staffid: '1605204',
+          firstname: 'Teodor',
+          lastname: 'Narliyski  ',
+          username: '1605204',
+          password: '1605204',
+          position: 'IT Support',
           role: "admin",
           gender: "Male",
-          email: "user@rgu.ac.uk",
-          mobile: "0785214785"
+          email: "t.narliyski@rgu.ac.uk",
+          mobile: "0785214785",
+          skills: [],
+          events: []
         }
       }]
     };

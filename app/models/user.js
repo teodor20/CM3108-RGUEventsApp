@@ -11,5 +11,7 @@ export default Model.extend({
   role: DS.attr(),
   gender: DS.attr(),
   email: DS.attr(),
-  mobile: DS.attr()
+  mobile: DS.attr(),
+  skills: DS.attr(),
+  events: DS.attr()
 });

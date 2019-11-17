@@ -474,6 +474,11 @@ p {
   width: 50%;
 }
 
+.column {
+  float: left;
+  width: 25%;
+}
+
 /**lists of eventprofile*/
 .jumbo-eventprofile{
   display: grid;

@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
 import { inject } from "@ember/service";
+import Ember from 'ember';
 
 export default Route.extend({
   userRights: inject('user-rights'),
@@ -17,6 +18,42 @@ export default Route.extend({
       role: null,
       username: null,
       password: null,
+      canEdit: this.userRights.getRights(),
+      skills: {
+        data:Ember.A(),
+        columns: [
+          {
+            "template": "custom/checkbox",
+            "useFilter": false,
+            "mayBeHidden": false,
+            "disableFiltering": true
+          },
+          {
+            "propertyName": "title",
+            "title": "Skill",
+            "disableFiltering": true
+          },
+        ]
+      },
+      events: {
+        data:Ember.A(),
+        columns: [
+          {
+            "template": "custom/checkbox",
+            "useFilter": false,
+            "mayBeHidden": false,
+            "disableFiltering": true,
+            "disabled": this.canEdit
+          },
+          {
+            "propertyName": "title",
+            "title": "Event",
+            "disableFiltering": true
+          },
+        ]
+      },
+      newSkill: null,
+      newEvent: null
     }
   },
   afterModel(model) {
@@ -49,6 +86,12 @@ export default Route.extend({
     vm.set('currentModel.username', username);
     vm.set('currentModel.password', password);
     vm.set('currentModel.confirmPassword', password);
+
+    let skills = userRecord.get('skills');
+    let events = userRecord.get('events');
+    vm.set('currentModel.skills.data', skills);
+    vm.set('currentModel.events.data', events);
+
   },
   actions: {
     goToLoginPage() {
@@ -74,6 +117,8 @@ export default Route.extend({
       let username = vm.get('currentModel.username');
       let password = vm.get('currentModel.password');
       let confirmPassword = vm.get('currentModel.confirmPassword');
+      let skills = vm.get('currentModel.skills.data');
+      let events = vm.get('currentModel.events.data');
 
       if (!password) {
         alert("Password cannot be empty");
@@ -87,6 +132,8 @@ export default Route.extend({
         record.set('position', position);
         record.set('email', email);
         record.set('mobile', mobile);
+        record.set('skills', skills);
+        record.set('events', events);
 
         vm.get('controller').transitionToRoute('users');
 
@@ -94,6 +141,53 @@ export default Route.extend({
       else {
         alert("Passwords do not match.");
       }
+    },
+    onSkillsTableDataChanged(settings) {
+      let vm = this;
+      let selectedItem = settings.selectedItems.get('firstObject');
+      vm.set('currentModel.selectedSkill', selectedItem);
+    },
+    onEventsTableDataChanged(settings) {
+      let vm = this;
+      let selectedItem = settings.selectedItems.get('firstObject');
+      vm.set('currentModel.selectedEvent', selectedItem);
+    },
+    addSkill() {
+      let vm = this;
+      let newSkill = vm.get('currentModel.newSkill')
+      let record = vm.get('currentModel.userRecord');
+      let skills = vm.get('currentModel.skills.data');
+      skills.pushObject({title: newSkill});
+      record.set('skills', skills);
+
+      vm.set('currentModel.skills.data', skills);
+    },
+    deleteSkill() {
+      let vm = this;
+      let selectedSkill = vm.get('currentModel.selectedSkill');
+      let record = vm.get('currentModel.userRecord');
+      let skills = vm.get('currentModel.skills.data');
+      skills.removeObject(selectedSkill);
+      record.set('skills', skills);
+      vm.set('currentModel.skills.data', skills);
+    },
+    addEvent() {
+      let vm = this;
+      let newEvent = vm.get('currentModel.newEvent')
+      let record = vm.get('currentModel.userRecord');
+      let events = vm.get('currentModel.events.data');
+      events.pushObject({title: newEvent});
+      record.set('events', events);
+      vm.set('currentModel.events.data', events);
+    },
+    deleteEvent() {
+      let vm = this;
+      let selectedEvent = vm.get('currentModel.selectedEvent');
+      let record = vm.get('currentModel.userRecord');
+      let events = vm.get('currentModel.events.data');
+      events.removeObject(selectedEvent);
+      record.set('events', events);
+      vm.set('currentModel.events.data', events);
     }
   }
 });
