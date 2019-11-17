@@ -9,6 +9,11 @@ const App = Application.extend({
   Resolver
 });
 
+Ember.onerror = function(error){
+  // Optional: pass error to Embers.Logger
+  Ember.Logger.assert(false, error);
+};
+
 loadInitializers(App, config.modulePrefix);
 
 export default App;

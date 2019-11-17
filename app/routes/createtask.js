@@ -18,6 +18,7 @@ export default Route.extend({
                 "task-owner": vm.controller.get("task-owner"),
                 "task-status": vm.controller.get("task-status")
             })
+            this.controller.transitionToRoute('eventprofile');
         },
         goToLoginPage() {
             let vm = this;

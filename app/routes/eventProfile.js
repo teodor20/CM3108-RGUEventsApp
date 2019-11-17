@@ -11,12 +11,17 @@ export default Route.extend({
   },
   afterModel(model) {
       let vm = this;
-      console.log(model);
       vm.set('currentModel', model);
   },
   actions: {
     goToLoginPage() {
       this.controller.transitionToRoute('login');
+    },
+    editTask(task_id) {
+      this.controller.transitionToRoute(`/edittask/${task_id}`);
+    },
+    createTask(event_id) {
+      this.controller.transitionToRoute(`/createtask/${event_id}`);
     }
   }
 });

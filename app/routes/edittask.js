@@ -5,11 +5,11 @@ export default Route.extend({
     userRights: inject('user-rights'),
     model(params) {
         let task_data = {};
+
+        //Find the task with task id.
         this.store.findAll('task').then(function(result) {
             task_data = result.find(t => t.id === params.task_id);
         });
-
-        console.log(JSON.stringify(task_data));
 
         return {
             canEdit: this.userRights.getRights(),
