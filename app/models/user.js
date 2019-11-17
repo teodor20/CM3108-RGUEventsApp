@@ -9,4 +9,7 @@ export default Model.extend({
   password: DS.attr(),
   position: DS.attr(),
   role: DS.attr(),
+  gender: DS.attr(),
+  email: DS.attr(),
+  mobile: DS.attr()
 });

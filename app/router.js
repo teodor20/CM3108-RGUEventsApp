@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('profile');
   this.route('eventprofile');
   this.route('login');
+  this.route('createuser');
 });
 
 export default Router;

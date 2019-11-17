@@ -86,7 +86,10 @@ export default function() {
           username: 'user',
           password: 'user',
           position: 'Lecturer',
-          role: "user"
+          role: "user",
+          gender: "Male",
+          email: "user@rgu.ac.uk",
+          mobile: "0785214785"
         }
       },
       {
@@ -99,7 +102,10 @@ export default function() {
           username: 'user1',
           password: 'user1',
           position: 'Lecturer',
-          role: "user"
+          role: "user",
+          gender: "Male",
+          email: "user@rgu.ac.uk",
+          mobile: "0785214785"
         }
       },
       {
@@ -112,7 +118,10 @@ export default function() {
           username: 'admin',
           password: 'admin',
           position: 'Lecturer',
-          role: "admin"
+          role: "admin",
+          gender: "Male",
+          email: "user@rgu.ac.uk",
+          mobile: "0785214785"
         }
       },
       {
@@ -125,7 +134,10 @@ export default function() {
           username: 'admin1',
           password: 'admin1',
           position: 'Lecturer',
-          role: "admin"
+          role: "admin",
+          gender: "Male",
+          email: "user@rgu.ac.uk",
+          mobile: "0785214785"
         }
       }]
     };

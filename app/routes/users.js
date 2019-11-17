@@ -47,12 +47,16 @@ export default Route.extend({
     goToLoginPage() {
       let vm = this;
       vm.get('userRights').resetRights();
-      this.get('controller').transitionToRoute('login');
+      vm.get('controller').transitionToRoute('login');
     },
     onDocumentDataChanged(settings) {
       let vm = this;
       let selectedItem = settings.selectedItems.get('firstObject');
       vm.set('currentModel.selectedItem', selectedItem);
+    },
+    addUser() {
+      let vm = this;
+      vm.get('controller').transitionToRoute('createuser');
     }
   }
 });
