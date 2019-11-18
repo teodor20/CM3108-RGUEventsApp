@@ -8,97 +8,97 @@ export default function() {
         type: 'events',
         id: 'hackaton-2019',
         attributes: {
-          title: 'RGU Hackaton 2019',
+          title: 'RGU Hackaton 14/10/2019',
           owner: 'RGY',
-          city: 'Aberdeen',
-          bedrooms: 15,
+          city: ' Sir Ian Wood Building',
+          bedrooms: 50,
           image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
-          description: 'This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.',
           users: [{
             title: "Mr. A"
           }, {
             title: "Mr. B"
-          }]
+          }],
+          description: 'The RGU Hackathon will give students the chance to compete with other students outside the University to compete against each other and see who has the better knowleadge about computer security.'
         }
       }, {
         type: 'events',
         id: 'urban-living',
         attributes: {
-          title: 'Urban Living',
+          title: 'Student Flats 30/10/2019',
           owner: 'Mike Teavee',
-          city: 'Seattle',
-          bedrooms: 1,
+          city: 'Sir Ian Wood Building',
+          bedrooms: 50,
           image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg',
-          description: "A commuters dream. This rental is within walking distance of 2 bus stops and the Metro.",
           users: [{
             title: "Mr. A"
           }, {
             title: "Mr. B"
-          }]
+          }],
+          description: "Student Life and living in student flats, explain how to live together with others and how to solve problems."
         }
       }, {
         type: 'events',
         id: 'downtown-charm',
         attributes: {
-          title: 'Downtown Charm',
+          title: 'Placement Options Oversea 11/11/2019',
           owner: 'Violet Beauregarde',
-          city: 'Portland',
-          bedrooms: 3,
+          city: 'Health Building',
+          bedrooms: 150,
           image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg',
-          description: "Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet.",
           users: [{
             title: "Mr. A"
           }, {
             title: "Mr. B"
-          }]
+          }],
+          description: "Talk to Student about Placement options overseas mostly focused on Compert Science Students and Cyber Security Students."
         }
       }, {
         type: 'events',
         id: 'hackaton-20191',
         attributes: {
-          title: 'RGU Hackaton 2019',
+          title: 'RGU Hackaton 10/10/2020',
           owner: 'RGY',
-          city: 'Aberdeen',
-          bedrooms: 15,
+          city: 'Sir Ian Wood Building',
+          bedrooms:100,
           image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
-          description: 'This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.',
           users: [{
             title: "Mr. A"
           }, {
             title: "Mr. B"
-          }]
+          }],
+          description: 'RGU Hackathon will give students the chance to compete with other students outside the University to compete against each other and see who has the better knowleadge about computer security.'
         }
       }, {
         type: 'events',
         id: 'urban-living1',
         attributes: {
-          title: 'Urban Living',
+          title: 'Student Flats 15/11/2020',
           owner: 'Mike Teavee',
-          city: 'Seattle',
-          bedrooms: 1,
+          city: 'Health Building',
+          bedrooms: 200,
           image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg',
-          description: "A commuters dream. This rental is within walking distance of 2 bus stops and the Metro.",
           users: [{
             title: "Mr. A"
           }, {
             title: "Mr. B"
-          }]
+          }],
+          description: "Talk about legal issues and how to solve them. Focuses on Scotland Law for Renting and how to approach your landlord. Teaches Students what they should look out for when renting a flat."
         }
       }, {
         type: 'events',
         id: 'downtown-charm1',
         attributes: {
-          title: 'Downtown Charm',
+          title: 'Placement Options Oversea 02/12/2020',
           owner: 'Violet Beauregarde',
-          city: 'Portland',
-          bedrooms: 3,
+          city: 'Health Building',
+          bedrooms: 20,
           image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg',
-          description: "Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet.",
           users: [{
             title: "Mr. A"
           }, {
             title: "Mr. B"
-          }]
+          }],
+          description: "Talk to Student about Placement options overseas mostly focused on Compert Science Students and Cyber Security Students."
         }
       }]
     };

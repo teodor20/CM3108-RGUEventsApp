@@ -1,29 +1,30 @@
 <div class="jumbo-eventprofile">
-  <h2 class="event-title">Event 001</h2>
+  <h2 class="event-title">RGU Hackathon 2019</h2>
   <img class="event-image" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg" alt="PhotoOfEvent!"/>
-  
+
     <div class="event-details">
       {{#if model.canEdit}}
       <div class="edit-event-button"><a href="#" class="btn btn-primary btn-custom mt-auto">Edit Event</a></div>
       {{/if}}
-      <div class="event-date">Date of Venue: 20/10/19</div>
-      <div class="event-location">Location of Venue: Union Square</div>
+      <div class="event-date">Date of Venue: 14/10/2019</div>
+      <div class="event-location">Location of Venue: Sir Ian Wood Building</div>
       <div class="event-organiser">Event Organiser: Mr Maxi Schuler</div>
-      <div class="event-attendance"> Estimated Attendance:  </div>
+      <div class="event-attendance"> Estimated Attendance: 100  </div>
     </div>
     <div class="event-description">Event Description:
-      <p>The Event is a standard charity event holded for the XYZ Cross.</p>
+      <p>The RGU Hackathon will give students the chance to compete with other students outside the University to compete against each other and see who has the better knowleadge about computer security.</p>
     </div>
 
-    
-    
+
+
       <li class="event-teamlist">Organisation Team:
         <ul>
-          <li>User 001</li>
-          <li>User 002</li>
+          <li>Teodor</li>
+          <li>George</li>
+          <li>Maxi</li>
         </ul>
       </li>
-    
+
       <li class="event-tasklist">Task/To Do list:
         {{#if model.canEdit}}
         <a href="#" class="btn btn-primary btn-custom mt-auto" {{action 'createTask' 0}}>Create Task</a>
