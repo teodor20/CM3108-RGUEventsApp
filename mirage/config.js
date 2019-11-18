@@ -249,7 +249,7 @@ export default function() {
         "id": '1',
         "attributes": {
           "name": 'Task 001',
-          "event-id": '0',
+          "event-id": 'hackaton-2019',
           "task-owner": 'User 001',
           "task-status": 'In Progress'
         }
@@ -258,7 +258,7 @@ export default function() {
         "id": '2',
         "attributes": {
           "name": 'Task 002',
-          "event-id": '0',
+          "event-id": 'hackaton-2019',
           "task-owner": 'User 002',
           "task-status": 'In Progress'
         }

@@ -12,9 +12,13 @@ export default Route.extend({
   afterModel(model) {
       let vm = this;
       vm.set('currentModel', model);
+      let canEdit = vm.get('userRights').getRights();
+      vm.set('currentModel.canEdit', canEdit);
   },
   actions: {
     goToLoginPage() {
+      let vm = this;
+      vm.get('userRights').resetRights();
       this.controller.transitionToRoute('login');
     },
     editTask(task_id) {

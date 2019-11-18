@@ -28,14 +28,6 @@
             <label for="event-description">Description of the event: </label>
             <textarea name="event-description"></textarea>
         </div>
-        <div class="input_row">
-            <label for="event-tasklist">Task/To Do List: </label>
-            <input type="array" name="event-tasklist">
-        </div>
-        <div class="input_row">
-            <label for="event-teamlist">Organizer Team-members: </label>
-            <input type="array" name="event-teamlist">
-        </div>
         <input class="btn btn-default login_button" type="submit" {{action 'storeEvent'}} value="Save Event">
     </form>
 {{else}}

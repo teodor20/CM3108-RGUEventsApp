@@ -10,7 +10,6 @@ const App = Application.extend({
 });
 
 Ember.onerror = function(error){
-  // Optional: pass error to Embers.Logger
   Ember.Logger.assert(false, error);
 };
 

@@ -68,6 +68,23 @@
 	text-align: center;
 }
 
+/* Event Profile page's "Edit Event" button */
+.edit-event-button {
+	margin-left: 7%;
+}
+
+.edit-task-button {
+	margin-left: 2%;
+}
+
+.event-tasklist > *, .event-tasklist > * > * {
+	margin-top: 1.5%;
+}
+
+.event-tasklist:first-child {
+	margin-bottom: 1.5%;
+}
+
 /* Style all font awesome icons */
 .fa {
 	padding: 5px;
