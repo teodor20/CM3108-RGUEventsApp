@@ -7,16 +7,14 @@ export default Route.extend({
         let task_data = {};
 
         //Find the task with task id.
-        this.store.findAll('task').then(function(result) {
-            task_data = result.find(t => t.id === params.task_id);
-        });
+        this.store.peekRecord('task', params.task_id);
 
         return {
             canEdit: this.userRights.getRights(),
 
             //Note: accessing data by using arrays because objects in JavaScript
             //can be used as arrays.
-            task_id: task_data["id"],
+            task_id: params.task_id,
             task_name: task_data["name"],
             task_event_id: task_data["event-id"],
             task_owner: task_data["task-owner"],
@@ -34,14 +32,14 @@ export default Route.extend({
     actions: {
         updateTask() {
             let vm = this;
-            let task_id = vm.controller.get("task-id");
-            let old_event = this.store.getReference("task", task_id);
+            let old_event = this.store.peekRecord("task", vm.model.task_id);
             this.store.deleteRecord(old_event);
             this.store.createRecord("task", {
-                "name": vm.controller.get("task-name"),
-                "event-id": vm.controller.get("event-id"),
-                "task-owner": vm.controller.get("task-owner"),
-                "task-status": vm.controller.get("task-status")
+                "name": vm.controller["task-name"],
+                "event-id": vm.model["event-id"],
+                "id": vm.model.task_id,
+                "task-owner": vm.controller["task-owner"],
+                "task-status": vm.controller["task-status"]
             });
             this.controller.transitionToRoute('eventprofile')
         },

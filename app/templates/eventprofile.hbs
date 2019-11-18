@@ -34,4 +34,20 @@
           {{/each}}
         </ul>
       </li>
+
+      <div>
+        {{models-table
+          data=model.users.data
+          columns=model.users.columns
+          pageSize=10000
+          showComponentFooter=false
+          multipleSelect=false
+          showGlobalFilter=false
+          showColumnsDropdown=false
+          displayDataChangedAction="onSkillsTableDataChanged"
+        }}
+        {{input type="text" name="newskill" value=model.newSkill}}<br><br>
+      <input class="btn btn-warning" type="submit" disabled={{if model.canEdit false true}} {{action "addUser"}} value="Add User">
+      <input class="btn btn-danger" type="submit" disabled={{if model.selectedSkill false true}} {{action "deleteUser"}} value="Delete User">
+      </div>
 </div>

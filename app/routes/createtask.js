@@ -5,6 +5,9 @@ export default Route.extend({
     userRights: inject('user-rights'),
     model(params) {
         return {
+            "task-name": null,
+            "task-owner": null,
+            "task-status": null,
             "canEdit": this.userRights.getRights(),
             "event-id": params.event_id
         };
@@ -13,10 +16,11 @@ export default Route.extend({
         saveTask() {
             let vm = this;
             vm.store.createRecord("task", {
-                "name": vm.controller.get("task-name"),
-                "event-id": vm.controller.get("event-id"),
-                "task-owner": vm.controller.get("task-owner"),
-                "task-status": vm.controller.get("task-status")
+                "id": Math.random() * 1000000,
+                "name": vm.controller["task-name"],
+                "event-id": vm.model["event-id"],
+                "task-owner": vm.controller["task-owner"],
+                "task-status": vm.controller["task-status"]
             })
             this.controller.transitionToRoute('eventprofile');
         },

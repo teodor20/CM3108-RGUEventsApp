@@ -1,19 +1,19 @@
 {{#if model.canEdit}}
+<form>
     <div class="input_row">
-		    <label for="task-name">Task Name: </label>
-            <input type="text" name="task-name" value={{model.task_name}}>
-        </div>
-    <input type="hidden" name="event-id" value={{model.task_event_id}}>
-    <input type="hidden" name="task-id" value={{model.task_id}}>
+		<label for="task-name">Task Name: </label>
+        {{input type="text" value=task-name name="task-name"}}
+    </div>
     <div class="input_row">
         <label for="task-owner">Assignee: </label>
-        <input type="text" name="task-owner" value={{model.task_owner}}>
+        {{input type="text" value=task-owner name="task-owner"}}
     </div>
     <div class="input_row">
         <label for="task-status">Status of the Task: </label>
-        <input type="text" name="task-status" value={{model.task_status}}>
+        {{input type="text" value=task-status name="task-status"}}
     </div>
-    <input class="btn btn-default login_button" type="submit" {{action 'updateTask'}} value="Save Event">
+    <input class="btn btn-default login_button" type="submit" {{action 'updateTask'}} value="Save Task">
+</form>
 {{else}}
     <div class="error_message">
         <p>You don't have the permission to edit a task.</p>

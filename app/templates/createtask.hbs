@@ -1,20 +1,20 @@
 {{#if model.canEdit}}
+<form>
     <!-- TODO: Add a "Create Task" button next on the event profile page -->
     <div class="input_row">
 		    <label for="task-name">Task Name: </label>
-            <input type="text" name="task-name">
+            {{input type="text" value=task-name name="task-name"}}
         </div>
-    <input type="hidden" name="event-id" value="">
     <div class="input_row">
         <label for="task-owner">Assignee: </label>
-        <input type="text" name="task-owner">
+        {{input type="text" value=task-owner name="task-owner"}}
     </div>
     <div class="input_row">
         <label for="task-status">Status of the Task: </label>
-        <input type="text" name="task-status">
+        {{input type="text" value=task-status name="task-status"}}
     </div>
-    <input type="hidden" name="event-id" value={{model.task-event-id}}>
-    <input class="btn btn-default login_button" type="submit" {{action 'saveTask'}} value="Save Event">
+    <input class="btn btn-default login_button" type="submit" {{action 'saveTask'}} value="Save Task">
+</form>
 {{else}}
     <div class="error_message">
         <p>You don't have the permission to create a task.</p>
