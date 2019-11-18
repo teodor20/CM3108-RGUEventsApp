@@ -12,9 +12,6 @@ export default Route.extend({
   afterModel(model) {
     let vm = this;
     vm.set('currentModel', model);
-
-
-    vm.set
   },
   actions: {
     goToLoginPage() {

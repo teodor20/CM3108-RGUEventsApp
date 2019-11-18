@@ -1,18 +1,18 @@
 {{outlet}}
 <div class="jumbo-user">
   <h2 class="user-fullname">Hi, {{model.firstname}}</h2>
-  <img scr="https://www.iconsdb.com/icons/preview/purple/user-4-xxl.png" alt="User Image">
+  <img class="user-image" scr="https://www.iconsdb.com/icons/preview/purple/user-4-xxl.png" alt="User Image">
 
-  <div class="user-idnumber">ID: {{model.id}}</div>
-  <div class="user-firstname">First Name: {{model.firstname}}</div>
-  <div class="user-lastname">Last Name: {{model.lastname}}</div>
-  <div class="user-gender">Gender: {{model.gender}}</div>
-  <div class="user-type">Type: {{model.role}}</div>
-  <div class="user-jobtitle">Role: {{model.position}}</div>
-  <div class="user-email">Email address: {{model.email}}</div>
-  <div class="user-mobile">Mobile Number: {{model.mobile}}</div>
+  <div class="user-idnumber"><b>ID:</b> {{model.id}}</div>
+  <div class="user-firstname"><b>First Name:</b> {{model.firstname}}</div>
+  <div class="user-lastname"><b>Last Name:</b> {{model.lastname}}</div>
+  <div class="user-gender"><b>Gender:</b> {{model.gender}}</div>
+  <div class="user-type"><b>Type:</b> {{model.role}}</div>
+  <div class="user-jobtitle"><b>Role:</b> {{model.position}}</div>
+  <div class="user-email"><b>Email address:</b> {{model.email}}</div>
+  <div class="user-mobile"><b>Mobile Number:</b> {{model.mobile}}</div>
 
-  <div class="user-projects">Assigned Events:
+  <div class="user-projects"><b>Assigned Events:</b>
     <ul>
       {{#each this.model.events as |event|}}
         <li>{{event.title}}</li>
@@ -20,7 +20,7 @@
     </ul>
   </div>
 
-  <div class="user-skills">Skills:
+  <div class="user-skills"><b>Skills:</b>
     <ul>
       {{#each this.model.skills as |skill|}}
         <li>{{skill.title}}</li>
